@@ -1,2 +1,3 @@
 # MusicalChairs
-Simple java app for playing musical chairs without chairs
+multi player bingo app
+
