@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class Player {
     Scanner sc = new Scanner(System.in);
-    private String name;
+    String name;
     private int number;
+    int rank=0;
     Game Bingo;
 
     public Player(int number) {

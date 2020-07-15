@@ -40,6 +40,20 @@ public class Game {
         }
         return Bingo();
     }
+    public int cut(int number) {
+
+        for(int i=0;i<5;i++){
+            for(int j=0;j<5;j++){
+                if(BingoTable[i][j]==number && select[i][j]==false){
+                    select[i][j]=true;
+                }
+                else{
+                    throw new AlreadyChosenException("The value has already been choosen");
+                }
+            }
+        }
+        return Bingo();
+    }
 
     public int Bingo() {
         int count = 0;
@@ -49,6 +63,35 @@ public class Game {
                 if (j == true) {
                     truecount++;
                 }
+            }
+            if (truecount == 5) {
+                count++;
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            int truecount = 0;
+            for (int j = 0; j < 5; j++) {
+                if (select[j][i] == true) {
+                    truecount++;
+                }
+            }
+            if (truecount == 5) {
+                count++;
+            }
+        }
+        for(int i=0;i<5;i++){
+            int truecount = 0;
+            if(select[i][i]==true){
+                truecount++;
+            }
+            if (truecount == 5) {
+                count++;
+            }
+        }
+        for(int i=0;i<5;i++){
+            int truecount = 0;
+            if(select[i][4-i]==true){
+                truecount++;
             }
             if (truecount == 5) {
                 count++;
