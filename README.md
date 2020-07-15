@@ -1,3 +1,3 @@
-# MusicalChairs
+# Bingo
 multi player bingo app
 
