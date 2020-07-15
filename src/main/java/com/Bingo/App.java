@@ -21,7 +21,7 @@ public class App
             System.exit(0);
         }
         int playerNumber=1;
-        for(int i=0;i<5;i++){
+        for(int i=0;i<players;i++){
             player[i]=new Player(playerNumber);
             player[i].start();
             playerNumber++;
